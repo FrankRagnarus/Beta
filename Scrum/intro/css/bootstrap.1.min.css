@@ -1,0 +1,95 @@
+body{
+	margin: 0 auto;
+	background-image: url("../img/gill.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+ul{
+	margin: 0px;
+	padding: 0px;
+
+}
+ul li a{
+	text-decoration: none;
+	color: white;
+	display: block;
+}     
+ul li{
+	text-align: center;
+	float: left;
+	width: 150px;
+	height: 40px;
+	background-color: black;
+	font-size: 20px;
+	line-height: 40px;
+	opacity: .6;
+	border: 5px solid #285189;
+}
+ul li a:hover{
+	background-color: orange;
+}
+ul li ul li{
+	display: none;
+}
+ul li:hover ul li{
+	display: block;
+}
+input{
+	height: 35px;
+	width: 200px;
+	font-size: 18px;
+	border: none;
+	margin-top: 10px;
+	margin-left: 60px;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	background-color: #2F4F4F;
+	padding-left: 30px;
+}
+nav{
+	margin: 150px auto;
+	width: 450px;
+	height: 450px;
+}
+#check{
+	display: none;
+}
+#central{
+	cursor: pointer;
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	margin: 150px 150px;
+	z-index: 1;
+}
+#central img{
+	width: 100%;
+	transition: all .4s ease-in-out;
+	border-radius: 50%;
+}
+.link{
+	position: absolute;
+	margin: 195px 195px;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	transition: all .1s ease-out;
+}
+#check:checked ~ a #link_01{
+	transform: translateY(-195px);
+}
+#check:checked ~ a #link_02{
+	transform: translateX(195px);
+	transition-delay: .1s;
+}
+#check:checked ~ a #link_03{
+	transform: translateY(195px);
+	transition-delay: .2s;
+}
+#check:checked ~ a #link_04{
+	transform: translateX(-195px);
+	transition-delay: .3s;
+}
+#check:checked ~  #central img{
+	transform: rotate(45deg);
+}
